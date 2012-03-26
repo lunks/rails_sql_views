@@ -8,7 +8,7 @@ module RailsSqlViews
       
       def base_tables(name = nil) #:nodoc:
         tables = []
-        cursor = execute("SELECT TABLE_NAME FROM USER_TABLES", name)
+        cursor = execute("SELECT TABLE_NAME FROM ALL_TABLES WHERE owner = SYS_CONTEXT('userenv', 'current_schema') AND secondary = 'N'", name)
         while row = cursor.fetch
           tables << row[0]
         end
@@ -18,7 +18,7 @@ module RailsSqlViews
       
       def views(name = nil) #:nodoc:
         views = []
-        cursor = execute("SELECT VIEW_NAME FROM USER_VIEWS", name)
+        cursor = execute("SELECT VIEW_NAME FROM ALL_VIEWS WHERE owner = SYS_CONTEXT('userenv', 'current_schema')", name)
         while row = cursor.fetch
           views << row[0]
         end
@@ -27,7 +27,7 @@ module RailsSqlViews
       
       # Get the view select statement for the specified table.
       def view_select_statement(view, name=nil)
-        cursor = execute("SELECT TEXT FROM USER_VIEWS WHERE VIEW_NAME = '#{view}'", name)
+        cursor = execute("SELECT TEXT FROM ALL_VIEWS WHERE VIEW_NAME = '#{view}' AND owner = SYS_CONTEXT('userenv', 'current_schema')", name)
         if row = cursor.fetch
           return row[0]
         else
