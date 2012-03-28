@@ -50,12 +50,12 @@ end
 begin
   require 'jeweler'
   Jeweler::Tasks.new do |s|
-    s.name = "rails_sql_views"
+    s.name = "ctreatma-rails_sql_views"
     s.summary = "Library which adds SQL Views to ActiveRecord."
-    s.email = "josh@technicalpickles.com"
-    s.homepage = "http://activewarehouse.rubyforge.org/rails_sql_views"
+    s.email = "charles.treatman@gmail.com"
+    s.homepage = "http://github.com/ctreatma/rails_sql_views"
     s.description = "Adds support for using SQL views within ActiveRecord"
-    s.authors = ["Anthony Eden"]
+    s.authors = ["Charles Treatman", "Anthony Eden"]
     s.files =  FileList[
       "CHANGELOG", 
       "README",
