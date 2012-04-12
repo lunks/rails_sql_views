@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "ctreatma-rails_sql_views"
-  s.version = "0.9.0"
+  s.version = "0.9.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Charles Treatman", "Anthony Eden"]
-  s.date = "2012-03-28"
+  s.date = "2012-04-12"
   s.description = "Adds support for using SQL views within ActiveRecord"
   s.email = "charles.treatman@gmail.com"
   s.extra_rdoc_files = [
@@ -23,7 +23,7 @@ Gem::Specification.new do |s|
     "Rakefile",
     "lib/active_record/view.rb",
     "lib/core_ext/module.rb",
-    "lib/rails_sql_views.rb",
+    "lib/ctreatma-rails_sql_views.rb",
     "lib/rails_sql_views/connection_adapters/abstract/schema_definitions.rb",
     "lib/rails_sql_views/connection_adapters/abstract/schema_statements.rb",
     "lib/rails_sql_views/connection_adapters/abstract_adapter.rb",
