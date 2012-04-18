@@ -4,8 +4,8 @@
 # -*- encoding: utf-8 -*-
 
 Gem::Specification.new do |s|
-  s.name = "ctreatma-rails_sql_views"
-  s.version = "0.9.1"
+  s.name = "lunks-rails_sql_views"
+  s.version = "0.9.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Charles Treatman", "Anthony Eden"]
@@ -40,7 +40,7 @@ Gem::Specification.new do |s|
     "lib/rails_sql_views/schema_dumper.rb",
     "lib/rails_sql_views/version.rb"
   ]
-  s.homepage = "http://github.com/ctreatma/rails_sql_views"
+  s.homepage = "http://github.com/lunks/rails_sql_views"
   s.require_paths = ["lib"]
   s.rubygems_version = "1.8.21"
   s.summary = "Library which adds SQL Views to ActiveRecord."
